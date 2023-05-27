@@ -75,7 +75,7 @@ public class ATM {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter amount to withdraw: ");
         double amount = scanner.nextDouble();
-        scanner.nextLine(); // consume the newline character
+        scanner.nextLine(); 
         if (amount > currentAccount.getBalance()) {
             System.out.println("Insufficient funds.");
             return;
@@ -88,7 +88,7 @@ public class ATM {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter amount to deposit: ");
         double amount = scanner.nextDouble();
-        scanner.nextLine(); // consume the newline character
+        scanner.nextLine(); 
         currentAccount.deposit(amount);
         System.out.println("Deposit successful.");
     }
@@ -99,7 +99,7 @@ public class ATM {
         String recipientAccountNumber = scanner.nextLine();
         System.out.print("Enter amount to transfer: ");
         double amount = scanner.nextDouble();
-        scanner.nextLine(); // consume the newline character
+        scanner.nextLine(); 
 
         Account recipientAccount = null;
         for (Account account : bank.getAccounts()) {
